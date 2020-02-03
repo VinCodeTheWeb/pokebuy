@@ -1,0 +1,24 @@
+{
+  "name": "pokebuy",
+  "version": "1.0.0",
+  "description": "Sample ecommerce training where you buy Pokémon",
+  "main": "index.js",
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "client": "npm start --prefix client",
+    "start": "node src/index.js",
+    "server": "./node_modules/.bin/env-cmd -f ./config/dev.env nodemon src/index.js",
+    "dev": "concurrently \"npm run server\"  \"npm run client\""
+  },
+  "author": "Vincenzo PELLEGRINI",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^5.1.0",
+    "express": "^4.17.1",
+    "stripe": "^8.12.0"
+  },
+  "devDependencies": {
+    "env-cmd": "^10.0.1",
+    "nodemon": "^2.0.2"
+  }
+}
